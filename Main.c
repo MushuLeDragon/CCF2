@@ -7,7 +7,6 @@
 #define VREF_moins 0.0f 
 #define PLEINE_ECH 1024 
 
-
 int tempdebase = 30;
 int temp = tempdebase;
 float tempCapteur;
@@ -15,7 +14,6 @@ float tempCapteur;
 //Pour récupérer la tension
 unsigned long ValeurADC = 0L;
 float tension = 0.0f;
-
 
 void changeTemperature();
 void afficheTemperature();
@@ -48,7 +46,6 @@ void main() {
     ADCON1 = 0b10001110;
     ADCON0 = 0b01000001;
 
-
     while (1) {
         changeTemperature();
         afficheTemperature(temp);
@@ -56,7 +53,6 @@ void main() {
         chauffage(temp, tempCapteur);
         ventilateur(temp, tempCapteur);
     }
-    
 }
 
 void changeTemperature() {
