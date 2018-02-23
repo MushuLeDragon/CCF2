@@ -65,6 +65,7 @@ void changeTemperature() {
 }
 
 void afficheTemperature(int temp) {
+    PORTC = 0x00;
     switch (temp) {
         case 22:
             PORTCbits.RC3 = 1;
@@ -118,12 +119,12 @@ void chauffage(float temp, float tempCapteur) {
 void ventilateur(float temp, float tempCapteur) {
     if (tempCapteur > temp) {
         if (tempCapteur >= (temp - 1)) {
-            PORTDbits.RD1 = 1;
+            PORTDbits.RD0 = 1;
         } else {
-            PORTDbits.RD1 = 0;
+            PORTDbits.RD0 = 0;
         }
     } else if (tempCapteur == temp) {
-        PORTDbits.RD1 = 0;
+        PORTDbits.RD0 = 0;
     }
     __delay_ms(5000);
 }
