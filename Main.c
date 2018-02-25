@@ -1,3 +1,10 @@
+/*
+ * Projet réalisé par :
+ * Loïc THIAW-WING-KAÏ
+ * Guillaume BAECHLER
+ * Thomas SAUVAJON
+*/
+
 #include <xc.h>
 #include <stdio.h>
 #include "config_bits.h"
